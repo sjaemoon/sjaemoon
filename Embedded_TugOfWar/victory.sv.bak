@@ -1,0 +1,60 @@
+
+module victory (clk, reset, left, right, leftmost, rightmost, winner);
+	input logic clk, reset, left, right, leftmost, rightmost;
+	output logic [6:0] winner;
+	enum {playing, win} ps, ns;
+	
+	always_comb begin
+		case (ps)
+			playing: begin winner = 7'b1111111;
+				if ((right & rightmost) | (left & leftmost))
+					ns = win; 
+				else if (left & leftmost)
+					ns = win;
+				else
+					ns = playing;
+			end
+			win: begin ns = win;
+				if (right & rightmost)
+					winner = 7'b1111001;
+				else // (left & leftmost)
+					winner = 7'b0100100;
+			end
+		endcase
+	end
+	
+	always_ff @(posedge clk) begin
+		if (reset)
+			ps <= playing;
+		else begin
+			ps <= ns;
+		end
+	end
+	
+endmodule
+
+module victory_testbench();
+	logic clk, reset, left, right, leftmost, rightmost;
+	logic winner;
+	
+	victory_testbench dut (clk, reset, left, right, leftmost, rightmost, winner);
+	
+	// Set up the clock.
+	parameter CLOCK_PERIOD = 100;
+	initial begin
+		clk <= 0;
+		forever#(CLOCK_PERIOD/2)clk <= ~clk;
+	end
+	
+	// Set up the inputs to the design. Each line is a clock cycle.
+	initial begin
+	  	reset <= 0; reset <= 0; left <= 0; right <= 0; leftmost <= 0; rightmost <= 0; @(posedge clk);
+		reset <= 0; reset <= 0; left <= 0; right <= 0; leftmost <= 0; rightmost <= 0; @(posedge clk);	
+	  	reset <= 0; reset <= 0; left <= 0; right <= 0; leftmost <= 0; rightmost <= 0; @(posedge clk);
+	  	reset <= 0; reset <= 0; left <= 0; right <= 0; leftmost <= 0; rightmost <= 0; @(posedge clk);
+	  	reset <= 0; reset <= 0; left <= 0; right <= 0; leftmost <= 0; rightmost <= 0; @(posedge clk);
+	  	reset <= 0; reset <= 0; left <= 0; right <= 0; leftmost <= 0; rightmost <= 0; @(posedge clk);
+	  	reset <= 0; reset <= 0; left <= 0; right <= 0; leftmost <= 0; rightmost <= 0; @(posedge clk);		
+		$stop; // End the simulation.
+	end
+endmodule

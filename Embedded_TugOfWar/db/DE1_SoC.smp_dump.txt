@@ -1,0 +1,22 @@
+
+State Machine - |DE1_SoC|counter:c2|ps
+Name ps.w7 ps.w6 ps.w5 ps.w4 ps.w3 ps.w2 ps.w1 ps.w0 
+ps.w0 0 0 0 0 0 0 0 0 
+ps.w1 0 0 0 0 0 0 1 1 
+ps.w2 0 0 0 0 0 1 0 1 
+ps.w3 0 0 0 0 1 0 0 1 
+ps.w4 0 0 0 1 0 0 0 1 
+ps.w5 0 0 1 0 0 0 0 1 
+ps.w6 0 1 0 0 0 0 0 1 
+ps.w7 1 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SoC|counter:c1|ps
+Name ps.w7 ps.w6 ps.w5 ps.w4 ps.w3 ps.w2 ps.w1 ps.w0 
+ps.w0 0 0 0 0 0 0 0 0 
+ps.w1 0 0 0 0 0 0 1 1 
+ps.w2 0 0 0 0 0 1 0 1 
+ps.w3 0 0 0 0 1 0 0 1 
+ps.w4 0 0 0 1 0 0 0 1 
+ps.w5 0 0 1 0 0 0 0 1 
+ps.w6 0 1 0 0 0 0 0 1 
+ps.w7 1 0 0 0 0 0 0 1 

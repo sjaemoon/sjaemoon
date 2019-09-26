@@ -1,0 +1,207 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                10/Aug/2019  14:04:41
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\Exe\lab2.out
+#    Map file     =  C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\List\lab2.map
+#    Command line =  
+#        -f C:\Users\sjaem\AppData\Local\Temp\EW858F.tmp
+#        (C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\Obj\cstartup_M.o
+#        C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\Obj\lab2_2_traffic_controller.o
+#        -o C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\Exe\lab2.out --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\List\lab2.map --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20007fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A0":                                       0xbc
+  .intvec            const    0x00000000    0xbc  cstartup_M.o [1]
+                            - 0x000000bc    0xbc
+
+"P1":                                      0x52c
+  .text              ro code  0x000000bc   0x434  lab2_2_traffic_controller.o [1]
+  .text              ro code  0x000004f0    0x2c  copy_init3.o [5]
+  .text              ro code  0x0000051c    0x28  data_init.o [5]
+  .text              ro code  0x00000544    0x22  fpinit_M.o [4]
+  .iar.init_table    const    0x00000568    0x14  - Linker created -
+  .text              ro code  0x0000057c     0x2  cstartup_M.o [1]
+  .text              ro code  0x00000580    0x1a  cmain.o [5]
+  .text              ro code  0x0000059a     0x4  low_level_init.o [3]
+  .text              ro code  0x0000059e     0x4  exit.o [3]
+  .text              ro code  0x000005a2     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005a4     0xa  cexit.o [5]
+  .text              ro code  0x000005ae     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005b0    0x14  exit.o [6]
+  .text              ro code  0x000005c4    0x10  cstartup_M.o [1]
+  .text              ro code  0x000005d4     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005d6     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005d8     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005da     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005dc     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005de     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005e0     0x2  cstartup_M.o [1]
+  .text              ro code  0x000005e2     0x2  cstartup_M.o [1]
+  Initializer bytes  const    0x000005e4     0x4  <for P2-1>
+  .rodata            const    0x000005e8     0x0  copy_init3.o [5]
+                            - 0x000005e8   0x52c
+
+"P2", part 1 of 2:                           0x4
+  P2-1                        0x20000000     0x1  <Init block>
+    .data            inited   0x20000000     0x1  lab2_2_traffic_controller.o [1]
+                            - 0x20000001     0x1
+
+"P2", part 2 of 2:                        0x1000
+  CSTACK                      0x20000008  0x1000  <Block>
+    CSTACK           uninit   0x20000008  0x1000  <Block tail>
+                            - 0x20001008  0x1000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4 (400% of destination):
+          0x000005e4   0x4
+    1 destination range, total size 0x1:
+          0x20000000   0x1
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                       ro code  ro data  rw data
+    ------                       -------  -------  -------
+C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\Obj: [1]
+    cstartup_M.o                      38      188
+    lab2_2_traffic_controller.o    1 076        1        1
+    ------------------------------------------------------
+    Total:                         1 114      189        1
+
+command line: [2]
+    ------------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                             4
+    low_level_init.o                   4
+    ------------------------------------------------------
+    Total:                             8
+
+m7M_tls.a: [4]
+    fpinit_M.o                        34
+    ------------------------------------------------------
+    Total:                            34
+
+rt7M_tl.a: [5]
+    cexit.o                           10
+    cmain.o                           26
+    copy_init3.o                      44
+    data_init.o                       40
+    ------------------------------------------------------
+    Total:                           120
+
+shb_l.a: [6]
+    exit.o                            20
+    ------------------------------------------------------
+    Total:                            20
+
+    Gaps                               2        2
+    Linker created                             23    4 096
+----------------------------------------------------------
+    Grand Total:                   1 298      214    4 097
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+.iar.init_table$$Base   0x00000568         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x0000057c         --   Gb  - Linker created -
+?main                   0x00000581        Code  Gb  cmain.o [5]
+CSTACK$$Base            0x20000008         --   Gb  - Linker created -
+CSTACK$$Limit           0x20001008         --   Gb  - Linker created -
+LED_init                0x00000127  0x76  Code  Gb  lab2_2_traffic_controller.o [1]
+Region$$Table$$Base     0x00000568         --   Gb  - Linker created -
+Region$$Table$$Limit    0x0000057c         --   Gb  - Linker created -
+Timer0A_Handler         0x0000039d  0x5c  Code  Gb  lab2_2_traffic_controller.o [1]
+Timer1A_Handler         0x000002db  0xc2  Code  Gb  lab2_2_traffic_controller.o [1]
+__cmain                 0x00000581        Code  Gb  cmain.o [5]
+__exit                  0x000005b1  0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x000004f1  0x2c  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x0000051d  0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x00000545        Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x000005c5  0x10  Code  Gb  cstartup_M.o [1]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__low_level_init        0x0000059b   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0xbc  Data  Gb  cstartup_M.o [1]
+_call_main              0x0000058d        Code  Gb  cmain.o [5]
+_exit                   0x000005a5        Code  Gb  cexit.o [5]
+_main                   0x00000597        Code  Gb  cmain.o [5]
+exit                    0x0000059f   0x4  Code  Gb  exit.o [3]
+go_LED                  0x0000046b  0x26  Code  Gb  lab2_2_traffic_controller.o [1]
+main                    0x000000bd  0x6a  Code  Gb  lab2_2_traffic_controller.o [1]
+s                       0x20000000   0x1  Data  Gb  lab2_2_traffic_controller.o [1]
+stop_LED                0x0000041f  0x26  Code  Gb  lab2_2_traffic_controller.o [1]
+sw_init                 0x0000019d  0x64  Code  Gb  lab2_2_traffic_controller.o [1]
+timer_init              0x00000201  0xda  Code  Gb  lab2_2_traffic_controller.o [1]
+turn_off                0x000003f9  0x26  Code  Gb  lab2_2_traffic_controller.o [1]
+warn_LED                0x00000445  0x26  Code  Gb  lab2_2_traffic_controller.o [1]
+
+
+[1] = C:\Users\sjaem\Desktop\EE474\lab2_IR\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  1 298 bytes of readonly  code memory
+    214 bytes of readonly  data memory
+  4 097 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

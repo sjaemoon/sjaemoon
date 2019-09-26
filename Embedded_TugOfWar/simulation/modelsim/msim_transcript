@@ -1,0 +1,140 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do DE1_SoC_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/seg7.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:16 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/seg7.sv 
+# -- Compiling module seg7
+# -- Compiling module seg7_testbench
+# 
+# Top level modules:
+# 	seg7_testbench
+# End time: 11:42:16 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/userInput.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:16 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/userInput.sv 
+# -- Compiling module userInput
+# -- Compiling module userInput_testbench
+# 
+# Top level modules:
+# 	userInput_testbench
+# End time: 11:42:16 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/normalLight.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:16 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/normalLight.sv 
+# -- Compiling module normalLight
+# -- Compiling module normalLight_testbench
+# 
+# Top level modules:
+# 	normalLight_testbench
+# End time: 11:42:16 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/metastabilityFree.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:16 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/metastabilityFree.sv 
+# -- Compiling module metastabilityFree
+# -- Compiling module metastabilityFree_testbench
+# 
+# Top level modules:
+# 	metastabilityFree_testbench
+# End time: 11:42:17 on May 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/victory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:17 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/victory.sv 
+# -- Compiling module victory
+# -- Compiling module victory_testbench
+# 
+# Top level modules:
+# 	victory_testbench
+# End time: 11:42:17 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/centerLight.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:17 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/centerLight.sv 
+# -- Compiling module centerLight
+# -- Compiling module centerLight_testbench
+# 
+# Top level modules:
+# 	centerLight_testbench
+# End time: 11:42:17 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:17 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/counter.sv 
+# -- Compiling module counter
+# -- Compiling module counter_testbench
+# 
+# Top level modules:
+# 	counter_testbench
+# End time: 11:42:17 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/LFSR.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:17 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/LFSR.sv 
+# -- Compiling module LFSR
+# -- Compiling module LFSR_testbench
+# ** Warning: C:/Users/sjaem/Desktop/EE271/lab5/LFSR.sv(43): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	LFSR_testbench
+# End time: 11:42:17 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/computer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:17 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/computer.sv 
+# -- Compiling module computer
+# -- Compiling module computer_testbench
+# 
+# Top level modules:
+# 	computer_testbench
+# End time: 11:42:17 on May 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:17 on May 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sjaem/Desktop/EE271/lab5" C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# ** Error (suppressible): (vlog-7061) C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv(75): Variable 'divided_clocks' driven in an always_ff block, may not be driven by any other process. See C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv(71).
+# -- Compiling module DE1_SoC_testbench
+# End time: 11:42:18 on May 21,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 17
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5 {C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv}"
+vsim work.userInput_testbench
+# vsim work.userInput_testbench 
+# Start time: 11:42:29 on May 21,2019
+# Loading sv_std.std
+# Loading work.userInput_testbench
+# Loading work.userInput
+add wave -position end sim:/userInput_testbench/dut/*
+run -all
+# ** Note: $stop    : C:/Users/sjaem/Desktop/EE271/lab5/userInput.sv(73)
+#    Time: 1350 ps  Iteration: 1  Instance: /userInput_testbench
+# Break in Module userInput_testbench at C:/Users/sjaem/Desktop/EE271/lab5/userInput.sv line 73
+# End time: 11:43:23 on May 21,2019, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 0

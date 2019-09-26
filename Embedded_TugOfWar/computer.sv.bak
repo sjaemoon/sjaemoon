@@ -1,0 +1,3 @@
+module computer (clk, reset, LFSR, SW, move);
+
+endmodule

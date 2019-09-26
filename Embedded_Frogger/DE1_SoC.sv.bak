@@ -1,0 +1,158 @@
+/*
+ 	Seungjae Moon
+	bmoon9
+	06/04/19
+	EE271
+	Final Project: Frogger
+	This program maps the Frogger game design to the FPGA.
+*/
+
+// Connects the user inputs to the keys, reset button to a switch,
+// and the corresponding ouputs to the LEDs.
+module DE1_SoC (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, GPIO_0);
+	input logic CLOCK_50; // 50MHz clock.
+	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
+	output logic [9:0] LEDR;
+	output logic [35:0] GPIO_0;
+	input logic [3:0] KEY; // True when not pressed, False when pressed.
+	input logic [9:0] SW;
+	logic [7:0][7:0] red_array, green_array;
+	logic reset, resetRound, survived, crashed;
+	logic [5:0] score;
+
+	// Generate clk off of CLOCK_50, whichClock picks rate.
+	logic [31:0] clk;
+	parameter whichClock = 15;
+	clock_divider cdiv (CLOCK_50, clk);
+	
+	assign reset = SW[9];
+	
+	led_matrix_driver matrix (.clk(clk[whichClock]), .reset,
+		.red_array, .green_array, 
+		.red_driver(GPIO_0[35:28]), 
+		.green_driver(GPIO_0[27:20]), 
+		.row_sink(GPIO_0[19:12]));
+	
+	// logic [9:0] random; 
+	//	LFSR ran (.clk(clk[whichClock]), .reset, .out(random));
+	//	computer comp (.reset, .random, .SW({1'b0, SW[8:0]}), .move(in1));
+
+	logic [3:0] in, move;
+	genvar g;
+	generate
+		for (g = 0; g < 4; g++) begin: user
+			metastabilityFree mF (.clk(clk[whichClock]), .reset, .in(~KEY[3-g]), .out(in[g]));
+			userInput uI (.clk(clk[whichClock]), .reset, .needReset(crashed), .pressed(in[g]), .move(move[g]));
+		end
+	endgenerate
+	// move[0] = left, move[1] = up, move[2] = down, move[3] = right
+
+	// Car pattern  on each row
+	logic [7:0][7:0] pattern;
+	logic [7:0] movingRight;
+	assign pattern[0][7:0] = 8'b00000000;
+	assign pattern[1][7:0] = 8'b11000100;
+	assign pattern[2][7:0] = 8'b01100010;
+	assign pattern[3][7:0] = 8'b01001011;
+	assign pattern[4][7:0] = 8'b00000000;
+	assign pattern[5][7:0] = 8'b11110010;
+	assign pattern[6][7:0] = 8'b01100110;
+	assign pattern[7][7:0] = 8'b11001001;
+	assign movingRight[0] = 1'b0;
+	assign movingRight[1] = 1'b0;
+	assign movingRight[2] = 1'b1;
+	assign movingRight[3] = 1'b0;
+	assign movingRight[4] = 1'b0;
+	assign movingRight[5] = 1'b1;
+	assign movingRight[6] = 1'b1;
+	assign movingRight[7] = 1'b0;
+	
+	genvar c;
+	generate
+		for (c = 0; c < 4; c++) begin: obstacle
+			cars obs (.clk(clk[whichClock]), .reset, .resetRound(survived), 
+			.pattern(pattern[c][7:0]), .movingRight(movingRight[c]), .cols(red_array[c][7:0]));
+		end
+	endgenerate
+	
+	genvar i, j;
+	generate
+		for (i = 0; i < 8; i++) begin: row
+			for (j = 0; j < 1; j++) begin :col
+				if (i == 0 && i == 3)
+					startFrog start (.clk(clk[whichClock]), .reset, .resetRound(survived), 
+					.L(move[0]), .U(move[1]), .D(move[2]), .R(move[3]), 
+					.NL(green_array[i][(j+7)%8]), .NU(green_array[i][(j+1)%8]), 
+					.ND(1'b0), .NR(green_array[(i+7)%8][j]), .lightOn(green_array[i][j]));
+					
+				else if (i == 0 && i != 3)
+					frog firstRow (.clk(clk[whichClock]), .reset, .resetRound(survived), 
+					.L(move[0]), .U(move[1]), .D(move[2]), .R(move[3]), 
+					.NL(green_array[i][(j+7)%8]), .NU(green_array[i][(j+1)%8]), 
+					.ND(1'b0), .NR(green_array[(i+7)%8][j]), .lightOn(green_array[i][j]));
+					
+				else if (i == 7)
+					frog lastRow (.clk(clk[whichClock]), .reset, .resetRound(survived), 
+					.L(move[0]), .U(move[1]), .D(move[2]), .R(move[3]), 
+					.NL(green_array[i][(j+7)%8]), .NU(1'b0), 
+					.ND(green_array[(i+1)%8][j]), .NR(green_array[(i+7)%8][j]), .lightOn(green_array[i][j]));
+					
+				else
+					frog row (.clk(clk[whichClock]), .reset, .resetRound(survived), 
+					.L(move[0]), .U(move[1]), .D(move[2]), .R(move[3]), 
+					.NL(green_array[i][(j+7)%8]), .NU(green_array[i][(j+1)%8]), 
+					.ND(green_array[(i+1)%8][j]), .NR(green_array[(i+7)%8][j]), .lightOn(green_array[i][j]));
+			end
+		end
+	endgenerate
+
+	checkFrog(.frog(green_array), .cars(red_array), .U(move[1]), .crashed, .survived); 
+	
+	//victory v (.left, .right, .winCond(LEDR[1]), .player(1'b0), .winner(humanWin));
+	//counter c (.clk(clk[whichClock]), .reset, .win(humanWin), .gameOver(humanWins), .score(humanScore));
+	//seg7 s (.bcd(humanScore), .leds(HEX0));
+	
+
+endmodule
+
+// divided_clocks[0] = 25MHz, [1] = 12.5Mhz, ...
+// [23] = 3Hz, [24] = 1.5Hz, [25] = 0.75Hz, ...
+module clock_divider (clock, divided_clocks);
+	input logic clock;
+	output logic [31:0] divided_clocks;
+	
+	initial begin
+		divided_clocks <= 0;
+	end
+	
+	always_ff @(posedge clock) begin
+		divided_clocks <= divided_clocks + 1;
+	end
+endmodule
+
+// Tests the connection between the input/output 
+// of the tug-of-war game and the hardware with 
+// input combinations that represent a typical game.
+module DE1_SoC_testbench();
+	logic CLOCK_50;
+	logic [6:0] KEY;
+	logic [9:0] SW;
+	logic HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LEDR;
+	
+	DE1_SoC dut (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW);
+	
+	// Set up the clock.
+	parameter CLOCK_PERIOD = 100;
+	initial begin
+		CLOCK_50 <= 0;
+		forever#(CLOCK_PERIOD/2)CLOCK_50 <= ~CLOCK_50;
+	end
+	
+	// Set up the inputs to the design. Each line is a clock cycle.
+	initial begin
+
+		$stop; // End the simulation.
+	end
+endmodule
+
+

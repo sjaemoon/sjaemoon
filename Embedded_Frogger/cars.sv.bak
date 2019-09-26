@@ -1,0 +1,47 @@
+
+module cars (clk, reset, resetRound, pattern, movingRight, cols);
+
+	input logic clk, reset, resetRound, movingRight;
+	input logic [7:0] pattern;
+	output logic [7:0] cols;
+	
+	always_ff @(posedge clk) begin
+		if (reset | resetRound)
+			cols <= pattern;
+		else if (movingRight)
+			cols <= {cols[0], cols[7:1]};
+		else
+			cols <= {cols[6:0], cols[7]};
+	end
+	
+endmodule
+
+module cars_testbench();
+	logic clk, reset, resetRound, movingRight;
+	logic [7:0] pattern, cols;
+	
+	cars dut (clk, reset, resetRound, pattern, movingRight, cols);
+	
+	// Set up the clock.
+	parameter CLOCK_PERIOD = 100;
+	initial begin
+		clk <= 0;
+		forever#(CLOCK_PERIOD/2)clk <= ~clk;
+	end
+	
+	// Set up the inputs to the design. Each line is a clock cycle.
+	initial begin
+		reset <= 1; resetRound <= 0; pattern <= 8'b11000100; movingRight <= 0; @(posedge clk);
+		reset <= 0; 												 							  @(posedge clk);
+																									  @(posedge clk);
+																									  @(posedge clk);
+																									  @(posedge clk);
+											  pattern <= 8'b01100010; movingRight <= 1; @(posedge clk);
+																									  @(posedge clk);
+																									  @(posedge clk);
+																									  @(posedge clk);
+																									  @(posedge clk);
+																									  @(posedge clk);					
+		$stop; // End the simulation.
+	end	
+endmodule

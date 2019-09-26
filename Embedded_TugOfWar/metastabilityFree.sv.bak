@@ -1,0 +1,19 @@
+// Deals with metastability with a pair of D-flipflops
+
+module metastabilityFree (clk, reset, in, out);
+	input logic clk, reset, in;
+	output logic out;
+	logic temp;
+	always_ff @(posedge clk) begin
+		if (reset) begin
+			out <= 0;
+		end
+		else begin
+			temp <= in;
+			out <= temp;
+		end
+	end
+endmodule
+
+
+

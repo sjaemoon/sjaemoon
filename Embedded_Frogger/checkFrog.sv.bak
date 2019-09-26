@@ -1,0 +1,28 @@
+
+module checkFrog (frog, cars, U, crashed, survived);
+	input logic U;
+	input logic [7:0][7:0] frog, cars;
+	output logic crashed, survived;
+	
+	integer i,j,k;
+	always_comb begin
+		for (i = 0; i < 8; i++) begin
+			for (j = 0; j < 8; j++) begin
+				if (frog[i][j] == cars[i][j])
+					crashed = 1'b1;
+				else
+					crashed = 1'b0;
+			end
+		end
+	end
+	
+	always_comb begin	
+		for (k = 0; k < 8; k++) begin
+			if (frog[7][k] & U & ~crashed)
+				survived = 1'b1;
+			else
+				survived = 1'b0;
+		end
+	end
+
+endmodule

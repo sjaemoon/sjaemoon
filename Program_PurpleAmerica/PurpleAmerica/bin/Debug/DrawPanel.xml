@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DrawPanel</name>
+    </assembly>
+    <members>
+        <member name="M:DrawPanelLibrary.MouseListener.FlushClickBuffer">
+            <summary>
+            Clears out any mouse click events recorded before the call to this method
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.MouseListener.ReadClick">
+            <summary>
+            Returns mouse click location. Clicks are processed in the order they occured.
+            If no click available, throws InvalidOperationException ...so always check ClickAvailable first!!
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DrawPanelLibrary.MouseListener.ClickAvailable">
+            <summary>
+            Indicates whether there are any unprocessed mouse click events
+            </summary>
+        </member>
+        <member name="T:DrawPanelLibrary.DrawingPanel">
+            <summary>
+            A window you can draw into
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.LogOutput(System.Int32)">
+            <summary>
+            Controls logging of images to disc
+            </summary>
+            <param name="numImageFiles">max files to keep (0 to turn off logging)</param>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a DrawingPanel with the given width and height
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.#ctor">
+            <summary>
+            Creates a DrawingPanel with default width and height
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.GetGraphics">
+            <summary>
+            Get a Graphics object that can draw into the DrawingPanel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.RefreshDisplay">
+            <summary>
+            Updates display with everything drawn to this point
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.Save(System.String)">
+            <summary>
+            Save contents of DrawingPanel as a .PNG file with the given fileName
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.Pause">
+            <summary>
+            Pauses program with default message displayed in message box
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.Pause(System.String)">
+            <summary>
+            Pauses program, with given message displayed in message box
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.FlushKeys">
+            <summary>
+            Clears out any key presses recorded before the call to this method
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.ReadKey">
+            <summary>
+            Returns the next key that was typed by the user. If no key available, keeps polling until one is.
+            ...So use KeyAvailable if you don't want to be blocked waiting for a key!
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.KeyDown(System.Char)">
+            <summary>
+            Returns true if the given key, specified by character, is currently down.
+            Currently recognizes just letters, 0-9 (on main keyboard), and space
+            </summary>
+            <param name="key">character printed on key</param>
+            <returns></returns>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.KeyDown(DrawPanelLibrary.SpecialKeys)">
+            <summary>
+            Returns true if the given key, specified by SpecialKeys code, is currently down
+            </summary>
+            <param name="key">SpecialKeys code for key</param>
+            <returns></returns>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.FlushClicks">
+            <summary>
+            Clears out any mouse click events recorded before the call to this method
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingPanel.ReadClick">
+            <summary>
+            Returns the next click from the user. If no click available, keeps polling until one is
+            ...So use ClickAvailable if you don't want to be blocked waiting for a click!
+            Note: does not take zoom factor into account
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DrawPanelLibrary.DrawingPanel.WidthOfDisplay">
+            <summary>
+            Width of drawing surface
+            </summary>
+        </member>
+        <member name="P:DrawPanelLibrary.DrawingPanel.HeightOfDisplay">
+            <summary>
+            Height of drawing surface
+            </summary>
+        </member>
+        <member name="P:DrawPanelLibrary.DrawingPanel.KeyAvailable">
+            <summary>
+            Indicates whether there are any unprocessed key presses
+            </summary>
+        </member>
+        <member name="P:DrawPanelLibrary.DrawingPanel.ClickAvailable">
+            <summary>
+            Indicates whether there are any unprocessed mouse click events
+            </summary>
+        </member>
+        <member name="P:DrawPanelLibrary.DrawingPanel.CurrentMousePos">
+            <summary>
+            Most recent recorded position of mouse relative to DrawingPanel.
+            Note: does not take zoom factor into account
+            </summary>
+        </member>
+        <member name="P:DrawPanelLibrary.DrawingPanel.MouseWithinPanel">
+            <summary>
+            True if mouse is currently within the bounds of the drawing surface
+            </summary>
+        </member>
+        <member name="F:DrawPanelLibrary.DrawingWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DrawPanelLibrary.DrawingWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DrawPanelLibrary.ImageComparer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.ImageComparer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DrawPanelLibrary.ImageComparer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DrawPanelLibrary.SpecialKeys">
+            <summary>
+            Selected control keys recognized by DrawPanel
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.KeyListener.KeyDown(System.Char)">
+            <summary>
+            Returns true if the given key, specified by character, is currently down
+            Currently recognizes just letters, 0-9 (on main keyboard), and space
+            </summary>
+            <param name="key">character printed on key</param>
+            <returns></returns>
+        </member>
+        <member name="M:DrawPanelLibrary.KeyListener.KeyDown(DrawPanelLibrary.SpecialKeys)">
+            <summary>
+            Returns true if the given key, specified by key code, is currently down
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DrawPanelLibrary.KeyListener.FlushKeyBuffer">
+            <summary>
+            Clears out any key presses recorded before the call to this method
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.KeyListener.ReadKey">
+            <summary>
+            Returns key typed by the user. Keys are returned in the order they were pressed.
+            If no key available, throws InvalidOperationException ...so always check KeyAvailable first!!
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DrawPanelLibrary.KeyListener.KeyAvailable">
+            <summary>
+            Indicates whether there are any unprocessed key presses
+            </summary>
+        </member>
+        <member name="F:DrawPanelLibrary.MessageInFront.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DrawPanelLibrary.MessageInFront.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DrawPanelLibrary.MessageInFront.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

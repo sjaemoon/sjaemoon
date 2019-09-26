@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfSticks_AI", "GameOfSticks_AI\GameOfSticks_AI.csproj", "{F22F851D-F6D6-40B0-81F0-61EB2928FE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F22F851D-F6D6-40B0-81F0-61EB2928FE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22F851D-F6D6-40B0-81F0-61EB2928FE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22F851D-F6D6-40B0-81F0-61EB2928FE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22F851D-F6D6-40B0-81F0-61EB2928FE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C07EBDEA-CA9D-4750-BC1C-63A59BBB4532}
+	EndGlobalSection
+EndGlobal

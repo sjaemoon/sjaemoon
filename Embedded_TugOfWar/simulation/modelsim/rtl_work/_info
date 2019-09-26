@@ -1,0 +1,522 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sjaem/Desktop/EE271/lab5/simulation/modelsim
+vcenterLight
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1558464137
+!i10b 1
+!s100 L62dnBJNHmQVT]kENDXUn2
+If_6aCkm0X0;HH431SmC641
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 centerLight_sv_unit
+S1
+R0
+Z5 w1558384437
+Z6 8C:/Users/sjaem/Desktop/EE271/lab5/centerLight.sv
+Z7 FC:/Users/sjaem/Desktop/EE271/lab5/centerLight.sv
+Z8 L0 19
+Z9 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z10 !s108 1558464137.000000
+Z11 !s107 C:/Users/sjaem/Desktop/EE271/lab5/centerLight.sv|
+Z12 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/centerLight.sv|
+!i113 1
+Z13 o-sv -work work
+Z14 !s92 -sv -work work +incdir+C:/Users/sjaem/Desktop/EE271/lab5
+Z15 tCvgOpt 0
+ncenter@light
+vcenterLight_testbench
+R1
+R2
+!i10b 1
+!s100 `ib>M1KJT?WaEag^eML??2
+ITUnQ15=6>KQRC@3kJP[[E1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 46
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R13
+R14
+R15
+ncenter@light_testbench
+vcomputer
+R1
+R2
+!i10b 1
+!s100 ]WVo>JW>Lj^hYCjflR?n`0
+ILnTV]Vo[ebPAGQES6BNnf2
+R3
+Z16 !s105 computer_sv_unit
+S1
+R0
+Z17 w1558399664
+Z18 8C:/Users/sjaem/Desktop/EE271/lab5/computer.sv
+Z19 FC:/Users/sjaem/Desktop/EE271/lab5/computer.sv
+Z20 L0 12
+R9
+r1
+!s85 0
+31
+R10
+Z21 !s107 C:/Users/sjaem/Desktop/EE271/lab5/computer.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/computer.sv|
+!i113 1
+R13
+R14
+R15
+vcomputer_testbench
+R1
+R2
+!i10b 1
+!s100 gGFEW^ch?RPzofa_;Mgg22
+IoNaeX:nWEdok:KnHRA]:03
+R3
+R16
+S1
+R0
+R17
+R18
+R19
+L0 21
+R9
+r1
+!s85 0
+31
+R10
+R21
+R22
+!i113 1
+R13
+R14
+R15
+vcounter
+R1
+R2
+!i10b 1
+!s100 U62B3DN9<kMk7TWe:d_>R1
+I5BMm3d5Dc_Zd=>:oN2B[i0
+R3
+Z23 !s105 counter_sv_unit
+S1
+R0
+Z24 w1558399665
+Z25 8C:/Users/sjaem/Desktop/EE271/lab5/counter.sv
+Z26 FC:/Users/sjaem/Desktop/EE271/lab5/counter.sv
+Z27 L0 14
+R9
+r1
+!s85 0
+31
+R10
+Z28 !s107 C:/Users/sjaem/Desktop/EE271/lab5/counter.sv|
+Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/counter.sv|
+!i113 1
+R13
+R14
+R15
+vcounter_testbench
+R1
+R2
+!i10b 1
+!s100 H3gaYh39VfKED:6[]=BgD1
+IRILc5PmeKEJeGGb2S`f<<1
+R3
+R23
+S1
+R0
+R24
+R25
+R26
+L0 55
+R9
+r1
+!s85 0
+31
+R10
+R28
+R29
+!i113 1
+R13
+R14
+R15
+vDE1_SoC
+R1
+R2
+!i10b 1
+!s100 ASN04zoAib>`GC1CKV>EU1
+IJXF6?j<X3jVg3Hlg84o192
+R3
+Z30 !s105 DE1_SoC_sv_unit
+S1
+R0
+Z31 w1558399662
+Z32 8C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv
+Z33 FC:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv
+L0 13
+R9
+r1
+!s85 0
+31
+R10
+Z34 !s107 C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv|
+Z35 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/DE1_SoC.sv|
+!i113 1
+R13
+R14
+R15
+n@d@e1_@so@c
+vDE1_SoC_testbench
+R1
+R2
+!i10b 1
+!s100 eX6o[k3NGzk?IO>bjgfZn3
+I^b3O@SJcKl42BDo]`nDM33
+R3
+R30
+S1
+R0
+R31
+R32
+R33
+L0 82
+R9
+r1
+!s85 0
+31
+R10
+R34
+R35
+!i113 1
+R13
+R14
+R15
+n@d@e1_@so@c_testbench
+vLFSR
+R1
+R2
+!i10b 1
+!s100 lK4HWRlHcYLLBTEz2gFW>1
+IQ0Go2JfzM;ZYlmT<3F`BD2
+R3
+Z36 !s105 LFSR_sv_unit
+S1
+R0
+Z37 w1558399663
+Z38 8C:/Users/sjaem/Desktop/EE271/lab5/LFSR.sv
+Z39 FC:/Users/sjaem/Desktop/EE271/lab5/LFSR.sv
+L0 11
+R9
+r1
+!s85 0
+31
+R10
+Z40 !s107 C:/Users/sjaem/Desktop/EE271/lab5/LFSR.sv|
+Z41 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/LFSR.sv|
+!i113 1
+R13
+R14
+R15
+n@l@f@s@r
+vLFSR_testbench
+R1
+R2
+!i10b 1
+!s100 UlYSkd0:ZT?fRjOPoA9MZ1
+IT?>L7XCDnBKPCBffKX7Nf1
+R3
+R36
+S1
+R0
+R37
+R38
+R39
+L0 27
+R9
+r1
+!s85 0
+31
+R10
+R40
+R41
+!i113 1
+R13
+R14
+R15
+n@l@f@s@r_testbench
+vmetastabilityFree
+R1
+Z42 !s110 1558464136
+!i10b 1
+!s100 P93:lZEXl5<8J>2Nl2;He3
+I2hWZ0<Ol`ZH8E5zHdNP^23
+R3
+Z43 !s105 metastabilityFree_sv_unit
+S1
+R0
+Z44 w1558334118
+Z45 8C:/Users/sjaem/Desktop/EE271/lab5/metastabilityFree.sv
+Z46 FC:/Users/sjaem/Desktop/EE271/lab5/metastabilityFree.sv
+R27
+R9
+r1
+!s85 0
+31
+Z47 !s108 1558464136.000000
+Z48 !s107 C:/Users/sjaem/Desktop/EE271/lab5/metastabilityFree.sv|
+Z49 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/metastabilityFree.sv|
+!i113 1
+R13
+R14
+R15
+nmetastability@free
+vmetastabilityFree_testbench
+R1
+R42
+!i10b 1
+!s100 R@4UzY^l0n5ZZP_ULUiIK3
+Iei;[a^09zohj<`F89K;RP1
+R3
+R43
+S1
+R0
+R44
+R45
+R46
+L0 32
+R9
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 1
+R13
+R14
+R15
+nmetastability@free_testbench
+vnormalLight
+R1
+R42
+!i10b 1
+!s100 nzh8X`C07`GVD75edCF5K1
+IYL:HbfNAEU_?^Weg7Mj;T2
+R3
+Z50 !s105 normalLight_sv_unit
+S1
+R0
+Z51 w1558387418
+Z52 8C:/Users/sjaem/Desktop/EE271/lab5/normalLight.sv
+Z53 FC:/Users/sjaem/Desktop/EE271/lab5/normalLight.sv
+R8
+R9
+r1
+!s85 0
+31
+R47
+Z54 !s107 C:/Users/sjaem/Desktop/EE271/lab5/normalLight.sv|
+Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/normalLight.sv|
+!i113 1
+R13
+R14
+R15
+nnormal@light
+vnormalLight_testbench
+R1
+R42
+!i10b 1
+!s100 `2iLhRUFi1M:<cRC7n]JG3
+I9o7[oX0[MCgfK6<>H<1]20
+R3
+R50
+S1
+R0
+R51
+R52
+R53
+L0 45
+R9
+r1
+!s85 0
+31
+R47
+R54
+R55
+!i113 1
+R13
+R14
+R15
+nnormal@light_testbench
+vseg7
+R1
+R42
+!i10b 1
+!s100 ^PED1DOKO<3=1F[Z>XKFk3
+I2S`lb1Xm9bOJ=I]z3z2h`3
+R3
+Z56 !s105 seg7_sv_unit
+S1
+R0
+Z57 w1558328840
+Z58 8C:/Users/sjaem/Desktop/EE271/lab5/seg7.sv
+Z59 FC:/Users/sjaem/Desktop/EE271/lab5/seg7.sv
+R20
+R9
+r1
+!s85 0
+31
+R47
+Z60 !s107 C:/Users/sjaem/Desktop/EE271/lab5/seg7.sv|
+Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/seg7.sv|
+!i113 1
+R13
+R14
+R15
+vseg7_testbench
+R1
+R42
+!i10b 1
+!s100 I75E]@ZGSFSFk?Z7=lj:j3
+Iz8]U4VYm1P^:dn`O1KV672
+R3
+R56
+S1
+R0
+R57
+R58
+R59
+L0 34
+R9
+r1
+!s85 0
+31
+R47
+R60
+R61
+!i113 1
+R13
+R14
+R15
+vuserInput
+R1
+R42
+!i10b 1
+!s100 TnVJEM3=Y]O8<]M[I`<W82
+I2;EfY@ZTa:KanEBOjZdKO2
+R3
+Z62 !s105 userInput_sv_unit
+S1
+R0
+Z63 w1558387417
+Z64 8C:/Users/sjaem/Desktop/EE271/lab5/userInput.sv
+Z65 FC:/Users/sjaem/Desktop/EE271/lab5/userInput.sv
+L0 15
+R9
+r1
+!s85 0
+31
+R47
+Z66 !s107 C:/Users/sjaem/Desktop/EE271/lab5/userInput.sv|
+Z67 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/userInput.sv|
+!i113 1
+R13
+R14
+R15
+nuser@input
+vuserInput_testbench
+R1
+R42
+!i10b 1
+!s100 KM>[el6VP]@9b:Pnj59463
+ICEE2[I1h2O1[<z9T=oH^D0
+R3
+R62
+S1
+R0
+R63
+R64
+R65
+L0 44
+R9
+r1
+!s85 0
+31
+R47
+R66
+R67
+!i113 1
+R13
+R14
+R15
+nuser@input_testbench
+vvictory
+R1
+R2
+!i10b 1
+!s100 LPUG[nOX[ZzG_28?78A>O0
+I]9d02a]U]66U?EA:_55>A2
+R3
+Z68 !s105 victory_sv_unit
+S1
+R0
+R51
+Z69 8C:/Users/sjaem/Desktop/EE271/lab5/victory.sv
+Z70 FC:/Users/sjaem/Desktop/EE271/lab5/victory.sv
+R27
+R9
+r1
+!s85 0
+31
+R10
+Z71 !s107 C:/Users/sjaem/Desktop/EE271/lab5/victory.sv|
+Z72 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sjaem/Desktop/EE271/lab5|C:/Users/sjaem/Desktop/EE271/lab5/victory.sv|
+!i113 1
+R13
+R14
+R15
+vvictory_testbench
+R1
+R2
+!i10b 1
+!s100 6XW40=_a7dUA:2P7Gk;9R3
+I?^RR37R?6Mm_L<=nGK:?i3
+R3
+R68
+S1
+R0
+R51
+R69
+R70
+L0 23
+R9
+r1
+!s85 0
+31
+R10
+R71
+R72
+!i113 1
+R13
+R14
+R15

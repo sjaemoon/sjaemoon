@@ -1,0 +1,34 @@
+module counter (clk, reset, win, score);
+	input logic clk, reset;
+	output logic win;
+	enum {w0, w1, w2, w3, w4, w5, w6, w7} ps, ns;
+	
+	always_comb begin
+		case (ps)
+			w0: if (win) ns = w1;
+				 else ns = w0;
+			w1: if (win) ns = w2;
+				 else ns = w1;
+			w2: if (win) ns = w3;
+				 else ns = w2;
+			w3: if (win) ns = w4;
+				 else ns = w3;
+			w4: if (win) ns = w5;
+				 else ns = w4;
+			w5: if (win) ns = w6;
+				 else ns = w5;
+			w6: if (win) ns = w7;
+				 else ns = w6;
+			w7: if ns = w7;
+		endcase
+	end
+	
+	always_ff @(posedge clk) begin
+		if (reset)
+			ps <= w0;
+		else
+			ps <= ns;
+	end
+	
+endmodule
+	

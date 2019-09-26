@@ -1,0 +1,32 @@
+C:\Users\brian\Desktop\EDUCATION\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe.config
+C:\Users\brian\Desktop\EDUCATION\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe
+C:\Users\brian\Desktop\EDUCATION\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.pdb
+C:\Users\brian\Desktop\EDUCATION\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\DrawPanel.dll
+C:\Users\brian\Desktop\EDUCATION\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csprojResolveAssemblyReference.cache
+C:\Users\brian\Desktop\EDUCATION\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.exe
+C:\Users\brian\Desktop\EDUCATION\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.pdb
+C:\Users\sjaem\OneDrive\COLLEGE\CSE\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe.config
+C:\Users\sjaem\OneDrive\COLLEGE\CSE\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe
+C:\Users\sjaem\OneDrive\COLLEGE\CSE\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.pdb
+C:\Users\sjaem\OneDrive\COLLEGE\CSE\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\DrawPanel.dll
+C:\Users\sjaem\OneDrive\COLLEGE\CSE\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csprojResolveAssemblyReference.cache
+C:\Users\sjaem\OneDrive\COLLEGE\CSE\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.exe
+C:\Users\sjaem\OneDrive\COLLEGE\CSE\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.pdb
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe.config
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.pdb
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\bin\Debug\DrawPanel.dll
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csprojAssemblyReference.cache
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csproj.CoreCompileInputs.cache
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csproj.CopyComplete
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.exe
+C:\Users\sjaem\OneDrive\College\CSE143\C#\1027284 - Moon - Fall Portfolio\1027284 - Moon - GameOfSticks (Extension)\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.pdb
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe.config
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.exe
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\bin\Debug\GameOfSticksOfficial.pdb
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\bin\Debug\DrawPanel.dll
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csprojAssemblyReference.cache
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csproj.CoreCompileInputs.cache
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.csproj.CopyComplete
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.exe
+C:\Users\sjaem\Desktop\GameOfSticks\GameOfSticksOfficial\obj\Debug\GameOfSticksOfficial.pdb

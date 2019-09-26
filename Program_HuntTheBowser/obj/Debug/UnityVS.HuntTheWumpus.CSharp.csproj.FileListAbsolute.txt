@@ -1,0 +1,28 @@
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\obj\Debug\UnityVS.HuntTheWumpus.CSharp.csprojResolveAssemblyReference.cache
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEditor.dll
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.dll
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\obj\Debug\Assembly-CSharp.dll
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\WumpusEngine.dll
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\WumpusEngine.pdb
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\WumpusEngine.xml
+C:\Users\Brian\Desktop\HuntTheWumpus\obj\Debug\UnityVS.HuntTheWumpus.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Brian\Desktop\HuntTheWumpus\obj\Debug\Assembly-CSharp.dll
+C:\Users\Brian\Desktop\HuntTheWumpus\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Brian\Desktop\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\WumpusEngine.dll
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\WumpusEngine.pdb
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\WumpusEngine.xml
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.xml
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEditor.xml
+H:\Documents\Visual Studio 2012 Projects\HuntTheWumpus\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml

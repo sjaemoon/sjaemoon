@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WumpusEngine</name>
+    </assembly>
+    <members>
+        <member name="M:Wumpus6B.Cave.#ctor(System.String)">
+            <summary>
+            Will create the cave object given a map file to work with, stores all of the info about rooms in a list
+            </summary>
+            <param name="caveNumber">the file name of the map that Cave will work with</param>
+        </member>
+        <member name="M:Wumpus6B.Cave.CurrentRoom(System.Int32)">
+            <summary>
+            Given a room number, wil return the RoomInfo about that room
+            </summary>
+            <param name="room">Which room to return info about</param>
+            <returns>The room info for the requested room</returns>
+        </member>
+        <member name="M:Wumpus6B.Cave.TotalRoomsNumber">
+            <summary>
+            Returns the total number of rooms created
+            </summary>
+            <returns>total number of rooms</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Cheat">
+            <summary>
+            Method used for demonstration
+            </summary>
+            <returns>a string used for demonstration purposes</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetCurrentState">
+            <summary>
+            Returns current game state as a State
+            </summary>
+            <returns>the current game state</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.StartGame(System.Int32,System.String)">
+            <summary>
+            Will start a new game
+            </summary>
+            <param name="caveNumber">Which number map we are using in this instance</param>
+            <param name="playerName">What name the player has entered</param>
+        </member>
+        <member name="M:Wumpus6B.GameControl.ContinueGame(System.Boolean)">
+            <summary>
+            When returning from a trivia instance, will switch game state back to game and do approriate actions
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.ViewHighScore">
+            <summary>
+            Will switch game state to High Score
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.StartTrivia(System.String,System.Int32)">
+            <summary>
+            Will start a trivia instance
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.ViewTitleScreen">
+            <summary>
+            Will switch the game state to title screen
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GoToTitleScreen">
+            <summary>
+            Private method used for setting game to title screen
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GoToHighScore">
+            <summary>
+            private method used for setting game to high score
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.PlayerWins">
+            <summary>
+            private method used for setting game to Win state, adds player high score to list
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.PlayerLoses">
+            <summary>
+            private method used for setting game to lose state
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GoToTrivia">
+            <summary>
+            private method used for setting game to trivia state
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.SetToGame">
+            <summary>
+            private method used for setting game to Game state
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.PlayerName">
+            <summary>
+            returns the player's name
+            </summary>
+            <returns>string containing player name</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Turns">
+            <summary>
+            returns the current turn
+            </summary>
+            <returns>int representing amount of turns taken</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Coins">
+            <summary>
+            returns the number of coins
+            </summary>
+            <returns>int representing amount of coins in inventory</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Arrows">
+            <summary>
+            returns the number of arrows
+            </summary>
+            <returns>int representing amount of arrows in inventory</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Secret">
+            <summary>
+            returns a random piece of trivia from the trivia object
+            </summary>
+            <returns>string containing a secret</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetHighScore">
+            <summary>
+            returns the high score from the high score object
+            </summary>
+            <returns>array of string[10] containing top 10 high scores</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.ChangeRooms(System.Int32)">
+            <summary>
+            Given a direction to go in, will go to the room in that direction and update currentRoom to represent that
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.ShootArrow(System.Int32)">
+            <summary>
+            Given a direction to shoot in, will check whether the wumpus was/wasn't shot and handle appropriately
+            </summary>
+            <param name="direction"></param>
+        </member>
+        <member name="M:Wumpus6B.GameControl.PurchaseArrow">
+            <summary>
+            Switches game state to trivia with cause arrow
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.PurchaseSecret">
+            <summary>
+            Switches game state to trivia with cause secret
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Wumpus">
+            <summary>
+            switches game state to trivia with cause bowser
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Pit">
+            <summary>
+            switches game state to trivia with cause banana
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Proceed">
+            <summary>
+            When called, will proceed with the hazard. Made to give user time to process situation
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.Bats">
+            <summary>
+            Will randomly place user in a room if they've encountered a turtle
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetQuestion">
+            <summary>
+            Will grab an array containing questions and possible answers to be displayed to user
+            </summary>
+            <returns>string[5] containing a question and 4 possible answers</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.CheckAnswer(System.Char)">
+            <summary>
+            Will check the answer given to it to see if it was the correct answer
+            </summary>
+            <param name="ans">what letter answer did the user choose</param>
+            <returns>bool representing wether the user's choice was correct or not</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.ChangeRoomsSpecial(System.Int32)">
+            <summary>
+            method used to change rooms in special occasions, where rooms aren't necessarily connected
+            </summary>
+            <param name="room">room to move to</param>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetExits">
+            <summary>
+            Will return an array with the exits of the current room in it
+            </summary>
+            <returns>int array showing current exits in which directions</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetHazard">
+            <summary>
+            Will return string containing which hazards are in room
+            </summary>
+            <returns>string containing which hazard is in room</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetMessage">
+            <summary>
+            Returns a string containing a message to be displayed along with room
+            </summary>
+            <returns>string containing message to be displayed</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetWarning">
+            <summary>
+            Returns an array of strings containing warnings that need to be displayed
+            </summary>
+            <returns>array of strings containing messages to be displayed</returns>
+        </member>
+        <member name="M:Wumpus6B.GameControl.GetRoomNumber">
+            <summary>
+            Returns which room we're currently in
+            </summary>
+            <returns>int representing current room</returns>
+        </member>
+        <member name="M:Wumpus6B.HighscoreManager.AddPlayerScore(System.String,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Will build a new scoreboard with new info
+            </summary>
+            <param name="PlayerName">Player's name</param>
+            <param name="numTurns"># of turns taken</param>
+            <param name="numCoins"># of coins in inventory</param>
+            <param name="numArrows"># of arrows in inventory</param>
+            <param name="WhichCave">Which cave the user was in</param>
+            <returns>List of scoreinfo cards about each high score</returns>
+        </member>
+        <member name="M:Wumpus6B.HighscoreManager.LoadScores">
+            <summary>
+            Will load up the scores from a file and place them in a list
+            </summary>
+            <returns>A list of scoreinfos about the high scores</returns>
+        </member>
+        <member name="M:Wumpus6B.HighscoreManager.SaveScores">
+            <summary>
+            Will save any new scores to the file
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.HighscoreManager.GetList">
+            <summary>
+            Returns the list of scoreinfos
+            </summary>
+            <returns>List of score infos</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.#ctor(System.String,System.String)">
+            <summary>
+            Will create a map
+            </summary>
+            <param name="caveNumber">which specific map are we using</param>
+            <param name="playerName">what's the players name</param>
+        </member>
+        <member name="M:Wumpus6B.Map.GetCheatString">
+            <summary>
+            Returns a string containing info for demonstration purposes
+            </summary>
+            <returns>string containing info for demonstration purposes</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.MoveToRoom(System.Int32)">
+            <summary>
+            Given a room number, will return info about that room
+            </summary>
+            <param name="room">which room to grab</param>
+            <returns>Room Info about that room</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.RoomsNearPits">
+            <summary>
+            Finds rooms near pits
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.RoomsNearBats">
+            <summary>
+            Finds which rooms are near the bats
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.RoomsNearWumpus">
+            <summary>
+            Finds which rooms are near the wumpus
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.PlaceEverything(System.Int32,System.String)">
+            <summary>
+            Sets initial location for everything
+            </summary>
+            <param name="totalRooms">how many rooms there are to work with</param>
+            <param name="name">What's the player's name</param>
+        </member>
+        <member name="M:Wumpus6B.Map.FindOpenAndRemove">
+            <summary>
+            Finds open rooms to work with
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wumpus6B.Map.ExitFinder(System.Int32)">
+            <summary>
+            Finds all the exits of a given room
+            </summary>
+            <param name="movePiece">Which room to find exits for</param>
+            <returns>List of ints representing the exits</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.IsEligibleRoom(System.Int32)">
+            <summary>
+            This method will move the player.
+            </summary>
+            <param name="room">Which room the player should move to actually int from 1 to 6 maybe idk</param>
+            <returns>true if player was successfully moved</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.ImminentDanger">
+            <summary>
+            Will determine the dangers contained in room
+            </summary>
+            <returns>string representing what dangers are in room</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.ObtainSecret">
+            <summary>
+            Will find a secret to be displayed
+            </summary>
+            <returns>String containing a secret</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.MoveWumpus(System.Int32,System.Int32)">
+            <summary>
+            Will move the wumpus around
+            </summary>
+            <param name="min">Minumum amount of rooms to move</param>
+            <param name="max">Max amount of rooms to move</param>
+        </member>
+        <member name="M:Wumpus6B.Map.BatEncounter">
+            <summary>
+            Will randomly place both the bats and user when encountered
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.PitBeat">
+            <summary>
+            Will move the player back to starting location when called
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.ShootArrow(System.Int32)">
+            <summary>
+            will check if the wumpus was shot when we shoot into a room
+            </summary>
+            <param name="room">Room to shoot into</param>
+            <returns>bool representing whether we shot the wumpus or not</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.Turns">
+            <summary>
+            returns an int representing # of turns taken
+            </summary>
+            <returns># of turns taken</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.Coins">
+            <summary>
+            returns # of coins in inventory
+            </summary>
+            <returns># of coins in inventory</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.Arrows">
+            <summary>
+            returns # of arrows user has
+            </summary>
+            <returns># of arrows user has</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.GetPlayerName">
+            <summary>
+            Returns player's name
+            </summary>
+            <returns>player's name</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.AddArrow">
+            <summary>
+            Will add an arrow to inventory
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.AddCoin">
+            <summary>
+            Will add a coin to inventory
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.RemoveCoin">
+            <summary>
+            Will remove a coin from inventory
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Map.PlayerLocation">
+            <summary>
+            returns an int representing player's location
+            </summary>
+            <returns>which room the player is in</returns>
+        </member>
+        <member name="M:Wumpus6B.Map.AddTurn">
+            <summary>
+            Adds a turn to the turn total
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Player.#ctor(System.Int32,System.String)">
+            <summary>
+            Will create a player object
+            </summary>
+            <param name="sL">What is the user's starting location</param>
+            <param name="playername">What is the user's name</param>
+        </member>
+        <member name="M:Wumpus6B.Player.AddTurn">
+            <summary>
+            Will add a turn to total
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Player.GetTurns">
+            <summary>
+            returns # of turns
+            </summary>
+            <returns># of turns</returns>
+        </member>
+        <member name="M:Wumpus6B.Player.RemoveArrow">
+            <summary>
+            Removes an arrow from inventory
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Player.GiveArrow">
+            <summary>
+            Adds an arrow from inventory
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Player.ArrowCount">
+            <summary>
+            Returns int showing # of arrows in inventory
+            </summary>
+            <returns># of arrows in inventory</returns>
+        </member>
+        <member name="M:Wumpus6B.Player.RemoveCoin">
+            <summary>
+            Removes coin from inventory
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Player.AddCoin">
+            <summary>
+            Adds coin to inventory
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Player.CoinCount">
+            <summary>
+            Returns # of coins user has
+            </summary>
+            <returns># of coins user has</returns>
+        </member>
+        <member name="M:Wumpus6B.Player.GetStartingRoom">
+            <summary>
+            Returns starting location
+            </summary>
+            <returns>starting room</returns>
+        </member>
+        <member name="M:Wumpus6B.Player.SetLocation(System.Int32)">
+            <summary>
+            Gives a new location for user
+            </summary>
+            <param name="newLocation">Where the user is now</param>
+        </member>
+        <member name="M:Wumpus6B.Player.GetLocation">
+            <summary>
+            Returns user's current location
+            </summary>
+            <returns>user's current location</returns>
+        </member>
+        <member name="M:Wumpus6B.Player.PlayerName">
+            <summary>
+            Returns player name
+            </summary>
+            <returns>player name</returns>
+        </member>
+        <member name="M:Wumpus6B.Question.#ctor(System.String)">
+            <summary>
+            given all of the info about the trivia, will sort and divide it into smaller pieces
+            </summary>
+            <param name="triviaLine">line containing all info about question</param>
+        </member>
+        <member name="M:Wumpus6B.Question.GetQuestion">
+            <summary>
+            Returns the question
+            </summary>
+            <returns>string containing question</returns>
+        </member>
+        <member name="M:Wumpus6B.Question.GetOptions">
+            <summary>
+            Returns all options
+            </summary>
+            <returns>Returns options</returns>
+        </member>
+        <member name="M:Wumpus6B.Question.GetSecret">
+            <summary>
+            Returns secret about question
+            </summary>
+            <returns>String containing secret</returns>
+        </member>
+        <member name="M:Wumpus6B.Question.GetAnswer">
+            <summary>
+            Returns char representing answer
+            </summary>
+            <returns>char representing answer</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Wumpus6B.RoomInfo.#ctor(System.String)" -->
+        <member name="M:Wumpus6B.RoomInfo.GiveMessage(System.String)">
+            <summary>
+            Give a message to be displayed
+            </summary>
+            <param name="m">message to be displayed</param>
+        </member>
+        <member name="M:Wumpus6B.RoomInfo.GiveWarning(System.String[])">
+            <summary>
+            Give a message to be displayed
+            </summary>
+            <param name="m">warning to be displayed</param>
+        </member>
+        <member name="M:Wumpus6B.RoomInfo.GiveHazard(System.String)">
+            <summary>
+            If there's a hazard in the room, put it here
+            </summary>
+            <param name="h">hazard in room</param>
+        </member>
+        <member name="M:Wumpus6B.RoomInfo.GetRoomNumber">
+            <summary>
+            Will return the current room's number
+            </summary>
+            <returns>room #</returns>
+        </member>
+        <member name="M:Wumpus6B.RoomInfo.GetExits">
+            <summary>
+            Will return an array of ints with all of the possible exits from the current room
+            </summary>
+            <returns>array of ints containing all exits</returns>
+        </member>
+        <member name="M:Wumpus6B.RoomInfo.GetMessage">
+            <summary>
+            Will return the message to be displayed along with room
+            </summary>
+            <returns>message to be displayed</returns>
+        </member>
+        <member name="M:Wumpus6B.RoomInfo.GetWarning">
+            <summary>
+            Will return the message to be displayed along with room
+            </summary>
+            <returns>warnings to be displayed</returns>
+        </member>
+        <member name="M:Wumpus6B.RoomInfo.GetHazard">
+            <summary>
+            Will return what hazard is in the room, if any
+            </summary>
+            <returns>string containing hazard in room</returns>
+        </member>
+        <member name="M:Wumpus6B.ScoreInfo.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            stores score
+            </summary>
+            <param name="PlayerName">player's name</param>
+            <param name="Score">player's score</param>
+            <param name="WhichCave">which cave was used</param>
+        </member>
+        <member name="M:Wumpus6B.ScoreInfo.ToString">
+            <summary>
+            Returns the info stored as one string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wumpus6B.TIManager.#ctor(System.String,System.Int32)">
+            <summary>
+            given the cause, and total questions to be asked, will make new trivia instance manager
+            </summary>
+            <param name="c">cause for trivia</param>
+            <param name="qTBA">questions to be asked</param>
+        </member>
+        <member name="M:Wumpus6B.TIManager.qR">
+            <summary>
+            returns # of questions required to win / lose
+            </summary>
+            <returns># of questions required to win / lose</returns>
+        </member>
+        <member name="M:Wumpus6B.TIManager.cA">
+            <summary>
+            returns # of correct answers
+            </summary>
+            <returns># of correct answers</returns>
+        </member>
+        <member name="M:Wumpus6B.TIManager.iA">
+            <summary>
+            returns # of incorrect answers
+            </summary>
+            <returns># of incorret answers</returns>
+        </member>
+        <member name="M:Wumpus6B.TIManager.Answer">
+            <summary>
+            returns char with answer
+            </summary>
+            <returns>char with answer</returns>
+        </member>
+        <member name="M:Wumpus6B.TIManager.GetCause">
+            <summary>
+            Returns cause for trivia instance
+            </summary>
+            <returns>string containing cause</returns>
+        </member>
+        <member name="M:Wumpus6B.TIManager.GiveAnswer(System.Char)">
+            <summary>
+            will set the answer
+            </summary>
+            <param name="newAnswer">char containing answer</param>
+        </member>
+        <member name="M:Wumpus6B.TIManager.userWrong">
+            <summary>
+            if user was wrong, will add to incorrect answers
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.TIManager.userRight">
+            <summary>
+            if user was right, will add to correct answers
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Trivia.#ctor">
+            <summary>
+            Initiliazes trivia, loading up questions 
+            </summary>
+        </member>
+        <member name="M:Wumpus6B.Trivia.GetTrivia">
+            <summary>
+            will return a question and it's answers
+            </summary>
+            <returns>returns array containing question and options</returns>
+        </member>
+        <member name="M:Wumpus6B.Trivia.GetAnswer">
+            <summary>
+            will return the answer to current question
+            </summary>
+            <returns>char representing answer</returns>
+        </member>
+    </members>
+</doc>

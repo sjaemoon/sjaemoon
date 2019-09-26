@@ -1,0 +1,137 @@
+Brainstorming!
+
+=======TO DO
+
+-Adjust for directional movement instead of just being told the room
+	Be given direction
+		0,  1,  2,  3, 4,  5
+		N, NE, SE, SW, S, SW
+	MAP
+		Given a direction, be able to tell if that's a valid exit
+	GAME CONTROL
+		Convert that direction into a room, test it with map, and then
+		tell map to grab that room info
+
+-Keep track of starting location of player
+	Put in Player Class
+
+-At least 5 different cave layouts
+	That's Connor's job
+
+-Can't be 2 hazards in same room
+	When assigning hazards, do quick run through
+	of all rooms that already have hazards. Put in
+	one that does not
+
+-Though hazardous, Wumpus is not a hazard
+	Just means that a Wumpus can be in the same room
+	as another hazard, just takes priority over it
+
+-We're not doing the awake / asleep wumpus
+
+-# arrows a player has
+	Player starts with three. Stored in player class
+
+-# of gold coins player has
+	Player starts with five. Stored in player class
+
+-Collection of Trivia Q & A
+ -Knows which Q's have already been asked/answered
+	Keeping track of them in a list of asked questions
+ -Qs should not be repeated (unless run out)
+	Restart list when all questions asked
+
+-Player's name
+	Prompt them for it upon starting game, Store in player class
+
+-List of Secrets
+ -Eg where bats, pits, and/or Wumpus are
+	Each time player buys a hint, make a new array of hints
+	string[] hints = { "There are bats in room" + bats[rand.Next],
+			   "The Wumpus is currently in room " + wumpus,
+			   etc.
+	Return a random hint.
+	Hints needed:
+		Where bats are
+		Where pits are
+		Where wumpus is
+		Answer to trivia q that you got wrong
+		player location
+
+-How many coins are left to distribute
+	Solved in specification, no more than 90 can be collected,
+
+-Start a new game
+	If we're currently on the title screen and the player clicks
+
+-End game
+	Everytime we change the coin amount, check to see if it hits 0
+	If it did, change the state to LOSE
+	Everytime we fire an arrow, check to see if we either
+		Shot the wumpus - go to WIN
+		Ran out of arrows - change state to LOSE
+	If we lost in the pit, change state to LOSE
+	If we lose when meeting the wumpus, change to LOSE
+
+-Shoot arrows
+	Give the direction that we're shooting in through int form
+		0,  1,  2,  3,  4, 5
+		N, NE, SE, S, SW, NW
+	Check if that room contained the wumpus
+		if it did, change state to WIN
+		if it didn't, move the wumpus
+			remove an arrow from inventory
+
+-If they beat the pit, put them in starting room
+	Store starting room as an int
+
+-Prompt for and record player's name
+	UI will hand that to me, and I'll give it to map, who'll assign it
+	to the player class
+
+-Prompt for which cave user wants to play in
+	Again, UI will hand which cave. Probably a bit of hard code here,
+	will hand string containing name of file that I pass to map when
+	I declare it, which it passes to cave.
+
+-Bats move randomly when player goes into a room containing a bat
+	For both this and when player escapes a pit, there will be a special
+	Method that he passes on a room number to and I move the player there,
+	no questions asked
+		static void PlayerJumpedTo(int newRoom)
+	Otherwise, both bats will be scrambled. Basically just call the method
+	that originally placed the bats again.
+
+-Trivia and high score interface is really more of a thing between them
+
+-Purchase secrets
+	UI tells me the user has purchased a secret. I tell map to subtract
+	a coin from the player's count. Start trivia game, 2 out of 3. If correct,
+	Map returns a secret from the list defined earlier, I give it to UI, he displays
+	secret on screen.
+
+-Purchase arrows
+	Same exact process as above, except instead if they win we add an arrow to their
+	inventory
+
+-Trivia
+	Most of that is done, just need to figure out how we'll transfer data about it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

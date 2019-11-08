@@ -1,6 +1,6 @@
 # Moon Portfolio Project Descriptions
 
-Fingerprint Locking System
+**Fingerprint Locking System**
 Jul 2019 – Aug 2019
 
 Overview
@@ -17,7 +17,7 @@ Skills
 
 
 
-Project nameMaze Solver
+**Project nameMaze Solver**
 Jul 2019 – Aug 2019
 
 Overview
@@ -33,7 +33,7 @@ Skills
 
 
 
-Frogger
+**Frogger**
 Apr 2019 – Jun 2019
 
 Project description
@@ -52,7 +52,7 @@ Skills
 
 
 
-Voltage Doubler Circuit
+**Voltage Doubler Circuit**
 Apr 2019 – Jun 2019
 
 Overview
@@ -68,7 +68,7 @@ Skills
 
 
 
-Audio Mixer System
+**Audio Mixer System**
 Jan 2019 – Apr 2019
 
 Overview
@@ -86,7 +86,7 @@ Skills
 
 
 
-Game of Sticks
+**Game of Sticks**
 Jun 2018 – Sep 2018
 
 Project descriptionOverview
@@ -103,7 +103,7 @@ The AI memorizes what number it chose when a certain number of sticks is left us
 
 
 
-Word Drawing
+**Word Drawing**
 Jul 2018 – Sep 2018
 
 Overview
@@ -113,7 +113,7 @@ This project emphasizes the use of Windows Form and class communication.
 
 
 
-Who's That Pokemon
+**Who's That Pokemon**
 Jun 2018
 
 Overview
@@ -125,7 +125,7 @@ I learned how to use Windows Form and extract bit information from image librari
 
 
 
-Greedy Strategies in Prisoner’s Dilemma
+**Greedy Strategies in Prisoner’s Dilemma**
 Jan 2018 – Apr 2018
 
 Overview
@@ -137,7 +137,7 @@ This research demonstrates the proficiency in differential equations, MATLAB, La
 
 
 
-Hunt the Bowser
+**Hunt the Bowser**
 Jan 2016 – Jun 2016
 
 Overview
